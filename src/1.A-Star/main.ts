@@ -2,7 +2,7 @@ import { Cell } from "./Cell";
 import { MapData } from "./MapData";
 import { RouteManager } from "./RouteManager";
 
-console.log('开始执行');
+console.log('开始执行A-Star:');
 
 var timestamp1 = new Date().getTime();
 
