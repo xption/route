@@ -1,0 +1,14 @@
+{
+    "name": "route",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test1": "tsc && node js/1.A-Star/main.js",
+        "test2": "tsc && node js/2.A-Star-Pool/main.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
+  }
+  
