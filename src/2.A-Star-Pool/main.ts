@@ -4,7 +4,7 @@ import { Pool } from "./Pool";
 import { RouteManager } from "./RouteManager";
 
 
-let loop: number = 10;
+let loop: number = 1;
 let count: number = 10000;
 console.log(`开始执行A-Star-Pool ${loop}轮，每轮${count}次`);
 

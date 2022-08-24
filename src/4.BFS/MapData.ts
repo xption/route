@@ -16,8 +16,7 @@ export class MapData {
 
         if (m == 98 && n != 0 && n != 99) {
             return true;
-        }
-        */
+        }*/
 
         return false;
     }
