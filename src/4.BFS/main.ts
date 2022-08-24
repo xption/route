@@ -1,11 +1,9 @@
-import { Cell } from "./Cell";
 import { MapData } from "./MapData";
 import { RouteManager } from "./RouteManager";
 
-
 let loop: number = 10;
 let count: number = 10000;
-console.log(`开始执行A-Star ${loop}轮，每轮${count}次`);
+console.log(`开始执行BFS ${loop}轮，每轮${count}次`);
 
 let mapData: MapData = new MapData();
 
@@ -15,10 +13,13 @@ for (let i = 0; i < loop; i++) {
     var timestamp1 = new Date().getTime();
     
     for (let j = 0; j < count; j++) {
-        let cellFrom: Cell = new Cell(0, 0);
-    let cellTo: Cell = new Cell(99, 99);
+        let mFrom: number = 50;
+        let nFrom: number = 50;
+        
+        let mTo: number = 99;
+        let nTo: number = 99;
     
-        RouteManager.Route(mapData, cellFrom, cellTo);
+        RouteManager.Route(mFrom, nFrom, mTo, nTo, mapData);
     }
     
     var timestamp2 = new Date().getTime();
@@ -34,3 +35,4 @@ for (let i = 0; i < timeArray.length; i++) {
 }
 
 console.log(`平均耗时（毫秒）: ${timeSum / timeArray.length}`);
+

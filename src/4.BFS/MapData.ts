@@ -8,7 +8,8 @@ export class MapData {
             return true;
         }
 
-        /* 复杂地图
+        /*
+        // 复杂地图
         if (n == 98 && m <= 98) {
             return true;
         }

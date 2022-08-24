@@ -3,23 +3,40 @@ import { MapData } from "./MapData";
 import { Pool } from "./Pool";
 import { RouteManager } from "./RouteManager";
 
-console.log('开始执行A-Star-Pool');
 
-var timestamp1 = new Date().getTime();
+let loop: number = 10;
+let count: number = 10000;
+console.log(`开始执行A-Star-Pool ${loop}轮，每轮${count}次`);
 
 let mapData: MapData = new MapData();
 
-for (let i = 0; i < 10000; i++) {
-    let cellFrom: Cell = Pool.Get();
-    cellFrom.m = 0;
-    cellFrom.n = 0;
+let timeArray: Array<number> = new Array<number>();
 
-    let cellTo: Cell = Pool.Get();
-    cellTo.m = 99;
-    cellTo.n = 99;
+for (let i = 0; i < loop; i++) {
+    var timestamp1 = new Date().getTime();
+    
+    for (let j = 0; j < count; j++) {
+        let cellFrom: Cell = Pool.Get();
+        cellFrom.m = 0;
+        cellFrom.n = 0;
+    
+        let cellTo: Cell = Pool.Get();
+        cellTo.m = 99;
+        cellTo.n = 99;
+    
+        RouteManager.Route(mapData, cellFrom, cellTo);
+    }
+    
+    var timestamp2 = new Date().getTime();
+    timeArray.push(timestamp2 - timestamp1);
 
-    RouteManager.Route(mapData, cellFrom, cellTo);
+    console.log(`第${i}轮耗时（毫秒）:`, timestamp2 - timestamp1);
 }
 
-var timestamp2 = new Date().getTime();
-console.log('耗费时间(毫秒)：', timestamp2 - timestamp1);
+let timeSum: number = 0;
+
+for (let i = 0; i < timeArray.length; i++) {
+    timeSum += timeArray[i];
+}
+
+console.log(`平均耗时（毫秒）: ${timeSum / timeArray.length}`);

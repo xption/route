@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "build": "tsc",
-        "test1": "node js/1.A-Star/main.js",
-        "test2": "node js/2.A-Star-Pool/main.js",
-        "test3": "node js/3.A-Star-Pool-BinaryStack/main.js"
+        "test1": "tsc && node js/1.A-Star/main.js",
+        "test2": "tsc && node js/2.A-Star-Pool/main.js",
+        "test3": "tsc && node js/3.A-Star-Pool-BinaryStack/main.js",
+        "test4": "tsc && node js/4.BFS/main.js"
     },
     "keywords": [],
     "author": "",
