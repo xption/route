@@ -6,7 +6,7 @@ import { RouteManager } from "./RouteManager";
 
 let loop: number = 10;
 let count: number = 10000;
-console.log(`开始执行A-Star-Pool-BinaryStack ${loop}轮，每轮${count}次`);
+console.log(`开始执行A-Star-Pool-BinaryHeap ${loop}轮，每轮${count}次`);
 
 let mapData: MapData = new MapData();
 

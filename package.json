@@ -5,8 +5,9 @@
     "scripts": {
         "test1": "tsc && node js/1.A-Star/main.js",
         "test2": "tsc && node js/2.A-Star-Pool/main.js",
-        "test3": "tsc && node js/3.A-Star-Pool-BinaryStack/main.js",
-        "test4": "tsc && node js/4.BFS/main.js"
+        "test3": "tsc && node js/3.A-Star-Pool-BinaryHeap/main.js",
+        "test4": "tsc && node js/4.BFS/main.js",
+        "test5": "tsc && node js/5.A-Star-BinaryStack/main.js"
     },
     "keywords": [],
     "author": "",
